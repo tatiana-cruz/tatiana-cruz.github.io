@@ -5,11 +5,7 @@ of Political Science, University of Wisconsin–Madison.
 
 Live at <https://tatianapaulacruz.com/>.
 
-## How it works
 
-A [Hugo](https://gohugo.io/) static site with custom layouts and no theme
-dependency. Pushing to `main` triggers `.github/workflows/deploy.yml`, which
-builds the site and publishes it to GitHub Pages.
 
 ## Layout
 
@@ -33,13 +29,6 @@ Five pages: Bio (`/`), Research, Teaching, CV, Contact.
 See [UPDATING.md](UPDATING.md) — written for editing directly on GitHub, no local
 setup required.
 
-## Local preview
-
-```bash
-hugo server
-```
-
-Requires Hugo extended (`brew install hugo`).
 
 ## Credits
 
