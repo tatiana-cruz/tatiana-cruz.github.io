@@ -1,0 +1,33 @@
+# "Where I come from": the Cataguases gallery on the homepage.
+# Leave credit blank for your own photographs.
+intro: >-
+  I was born in Cataguases, Minas Gerais, Brazil, a city of 66,261 people in the
+  Zona da Mata. It has more modern architecture than a city its size usually does,
+  including buildings by Oscar Niemeyer, Aldary Toledo, Francisco Bolonha and
+  Edgar Guimarães do Vale. IPHAN listed the town's historic and architectural
+  ensemble in 2003.
+
+photos:
+  - image: "images/cataguases/santa-rita.jpg"
+    alt: "The Santuário de Santa Rita de Cássia, a modernist church with a curved roofline, slender spire and a large blue-and-white tiled panel across its façade."
+    caption: "Santuário de Santa Rita de Cássia, by Edgar Guimarães do Vale. The tiled panel is by the painter Djanira."
+    credit_text: "My photograph"
+    credit_url: ""
+
+  - image: "images/cataguases/ponte-metalica.jpg"
+    alt: "The Ponte Metálica, a red steel truss bridge crossing the Rio Pomba between wooded banks."
+    caption: "The Ponte Metálica over the Rio Pomba, opened in 1915."
+    credit_text: "Paulo César Rodrigues, CC BY-SA 4.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Ponte_Met%C3%A1lica_-_Cataguases_MG.jpg"
+
+  - image: "images/cataguases/vista.jpg"
+    alt: "Cataguases seen from a hillside, houses spreading across the valley with the river winding through and green hills beyond."
+    caption: "The town in the valley of the Rio Pomba."
+    credit_text: "Pauloc33, CC BY-SA 3.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Vista_Cataguases.jpg"
+
+  - image: "images/cataguases/fazendinha.jpg"
+    alt: "An ornate single-storey house with arched windows, lit warmly against the night."
+    caption: "The Fazendinha, lit at night."
+    credit_text: "Sérgio Mourão, CC BY-SA 4.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Fazendinha_de_Cataguases.jpg"

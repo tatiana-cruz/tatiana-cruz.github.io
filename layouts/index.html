@@ -1,0 +1,68 @@
+{{ define "main" }}
+{{ $p := site.Params }}
+<div class="shell">
+  {{ partial "page-head.html" (dict "eyebrow" $p.institution "title" "Bio") }}
+
+  <div class="split">
+    <div class="split-main">
+      <div class="prose">{{ .Content }}</div>
+      {{- with $p.interests }}
+      <div class="block block--interests">
+        <p class="block-label">Research interests</p>
+        <p>{{ delimit . " · " }}</p>
+      </div>
+      {{- end }}
+    </div>
+
+    <aside class="split-side">
+      {{- with $p.photo }}
+      <img class="portrait" src="{{ . | relURL }}" width="190" height="271" alt="Portrait of {{ $p.author }}">
+      {{- end }}
+
+      <div class="block">
+        <p class="block-label">Contact</p>
+        <p><a href="mailto:{{ $p.email }}">{{ $p.email }}</a></p>
+        {{- range $p.social }}{{ if not (strings.HasPrefix .url "mailto:") }}
+        <p><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></p>
+        {{- end }}{{ end }}
+        <p><a href="{{ $p.cv | relURL }}" target="_blank" rel="noopener">CV (PDF)</a></p>
+      </div>
+
+      {{- with hugo.Data.education }}
+      <div class="block">
+        <p class="block-label">Education</p>
+        {{- range . }}
+        <p>{{ .degree }}, {{ .school }}, {{ .year }}</p>
+        {{- end }}
+      </div>
+      {{- end }}
+    </aside>
+  </div>
+
+  {{- with hugo.Data.gallery }}
+  <section class="gallery" aria-labelledby="gallery-h">
+    <h2 id="gallery-h" class="section-title">Where I come from</h2>
+    {{- with .intro }}<p class="gallery-intro">{{ . }}</p>{{ end }}
+    <div class="grid">
+      {{- range .photos }}
+      <figure class="tile">
+        <img src="{{ .image | relURL }}" alt="{{ .alt }}" loading="lazy" width="760" height="570">
+        <figcaption>
+          {{ .caption }}
+          {{- if .credit_text }}
+          <span class="tile-credit">
+            {{- if .credit_url -}}
+            <a href="{{ .credit_url }}" target="_blank" rel="noopener">{{ .credit_text }}</a>
+            {{- else -}}
+            {{ .credit_text }}
+            {{- end -}}
+          </span>
+          {{- end }}
+        </figcaption>
+      </figure>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+</div>
+{{ end }}

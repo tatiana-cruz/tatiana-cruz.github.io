@@ -1,0 +1,48 @@
+{{ define "main" }}
+<div class="shell">
+  {{ partial "page-head.html" (dict "eyebrow" "Education, awards, and talks" "title" .Title) }}
+  <p class="lede"><a class="btn" href="{{ site.Params.cv | relURL }}" target="_blank" rel="noopener">Download CV (PDF)</a></p>
+
+  {{- with hugo.Data.education }}
+  <h2 class="section-title">Education</h2>
+  <ul class="rows">
+    {{- range . }}
+    <li class="row">
+      <div class="row-main">
+        <span class="row-title">{{ .degree }}</span>
+        <span class="row-sub">{{ .school }}</span>
+      </div>
+      <span class="row-meta">{{ .year }}</span>
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+
+  {{- with hugo.Data.awards }}
+  <h2 class="section-title">Awards &amp; Grants</h2>
+  <ul class="rows">
+    {{- range . }}
+    <li class="row">
+      <div class="row-main">
+        <span class="row-title">{{ .name }}{{ with .amount }} <span class="row-amount">({{ . }})</span>{{ end }}</span>
+        {{- with .detail }}<span class="row-sub">{{ . }}</span>{{ end }}
+      </div>
+      <span class="row-meta">{{ .year }}</span>
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+
+  {{- with hugo.Data.talks }}
+  <h2 class="section-title">Conference Presentations</h2>
+  <ul class="rows">
+    {{- range . }}
+    <li class="row">
+      <div class="row-main"><span class="row-title">{{ .venue }}</span></div>
+      <span class="row-meta">{{ .years }}</span>
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</div>
+{{ end }}

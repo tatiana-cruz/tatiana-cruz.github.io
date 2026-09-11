@@ -1,0 +1,6 @@
+{{ define "main" }}
+<div class="shell">
+  {{ partial "page-head.html" (dict "eyebrow" "Error 404" "title" "Page not found") }}
+  <p class="lede">That page doesn't exist. <a href="{{ "/" | relURL }}">Return to the homepage</a>.</p>
+</div>
+{{ end }}

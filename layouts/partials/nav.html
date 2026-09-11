@@ -1,0 +1,18 @@
+<nav class="nav" aria-label="Primary">
+  <div class="shell nav-inner">
+    <a class="nav-brand" href="{{ "/" | relURL }}">{{ site.Params.author }}</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" hidden>
+    <label for="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="u-visually-hidden">Menu</span>
+    </label>
+    <ul class="nav-links">
+      {{- $cur := .RelPermalink }}
+      {{- range site.Menus.main }}
+      <li><a href="{{ .URL | relURL }}"{{ if eq $cur (.URL | relURL) }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      {{- end }}
+    </ul>
+  </div>
+</nav>

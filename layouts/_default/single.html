@@ -1,0 +1,6 @@
+{{ define "main" }}
+<div class="shell">
+  {{ partial "page-head.html" (dict "eyebrow" site.Params.institution "title" .Title) }}
+  <div class="prose">{{ .Content }}</div>
+</div>
+{{ end }}

@@ -1,0 +1,59 @@
+# Working papers and publications.
+# To add one: copy a block, keep the indentation, fill in the fields.
+# status: working paper | work in progress | under review | revise and resubmit | accepted | published
+
+working_papers:
+  - title: "Populism on Trial: Judicial Resilience in the Face of Populist Attacks"
+    authors: ["Tatiana Paula da Cruz"]
+    status: "working paper"
+    dissertation: true
+    summary: >-
+      Using the Brazilian Supreme Federal Court's full docket from redemocratization to the
+      present and a newspaper-based measure of executive attacks, this paper tests whether
+      justices strategically adjust the timing and priority of the president's cases when the
+      Court is under sustained populist attack.
+    pdf: ""
+    link: ""
+
+  - title: "Sacred Votes: How Evangelical Churches Influence Electoral Outcomes in Brazil"
+    authors: ["Tatiana Paula da Cruz"]
+    status: "working paper"
+    dissertation: false
+    note: "Presented at the APSA Annual Meeting, 2026."
+    summary: >-
+      Using an original, hand-validated dataset of geolocated evangelical churches matched to
+      precinct-level returns in Rio de Janeiro, and a difference-in-differences design exploiting
+      the timing of new church openings after 2018, the paper shows that a newly opened church
+      within 500 metres of a polling station raised Bolsonaro's 2022 vote share by about 0.6
+      points, drawn from both persuasion and the activation of would-be spoiled ballots.
+    pdf: ""
+    link: ""
+
+  - title: "The Dark Side of Anti-Corruption Politics: Populist Spillover Effects on Public Tolerance for Anti-Democratic Measures"
+    authors: ["Tatiana Paula da Cruz"]
+    status: "working paper"
+    dissertation: true
+    note: "Registered report. Presented at Visions in Methodology, 2026."
+    summary: >-
+      A registered report proposing a 2×2 factorial survey experiment with 4,600 Brazilian
+      respondents, testing whether mainstream anti-corruption rhetoric, stripped of populist
+      framing, increases public tolerance for anti-democratic measures against courts.
+    pdf: ""
+    link: ""
+
+articles:
+  - title: "Trusting the Courts: Exploring the Link Between Populism, Trust in Courts, and Democracy in Brazil"
+    authors: ["Tatiana Paula da Cruz"]
+    venue: "Journal of Politics in Latin America"
+    volume: "18(2)"
+    year: 2024
+    status: "published"
+    link: "https://doi.org/10.1177/1866802X241295784"
+
+  - title: "The Influence of the Militarisation of Bureaucracies during Bolsonaro's Government on Public Opinion about the Brazilian Armed Forces"
+    authors: ["Tatiana Paula da Cruz"]
+    venue: "Bulletin of Latin American Research"
+    volume: "43(3)"
+    year: 2024
+    status: "published"
+    link: "https://doi.org/10.1111/blar.13565"

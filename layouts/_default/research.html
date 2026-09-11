@@ -1,0 +1,47 @@
+{{ define "main" }}
+{{ $papers := hugo.Data.papers }}
+<div class="shell">
+  {{ partial "page-head.html" (dict "eyebrow" "Working papers and publications" "title" .Title) }}
+
+  {{- with $papers.working_papers }}
+  <h2 class="section-title">Working Papers</h2>
+  <ul class="papers">
+    {{- range . }}
+    <li class="paper{{ if .dissertation }} paper--featured{{ end }}">
+      <h3 class="paper-title">
+        {{- if .pdf }}<a href="{{ .pdf | relURL }}">{{ .title }}</a>
+        {{- else if .link }}<a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
+        {{- else }}{{ .title }}{{ end -}}
+      </h3>
+      <p class="paper-meta">
+        <span class="badge">{{ .status }}</span>
+        {{- if .dissertation }}<span class="badge">dissertation chapter</span>{{ end }}
+        {{- with .note }}<span class="paper-note">{{ . }}</span>{{ end }}
+      </p>
+      {{- with .summary }}<p class="paper-summary">{{ . }}</p>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+
+  {{- with $papers.articles }}
+  <h2 class="section-title">Peer-Reviewed Articles</h2>
+  <ul class="papers">
+    {{- range . }}
+    <li class="paper">
+      <h3 class="paper-title">
+        {{- if .link }}<a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
+        {{- else }}{{ .title }}{{ end -}}
+      </h3>
+      <p class="paper-meta">
+        {{ delimit .authors ", " }}.
+        {{- with .venue }} <em>{{ . }}</em>{{ end }}
+        {{- with .volume }}, {{ . }}{{ end }}
+        {{- with .year }} ({{ . }}){{ end }}.
+      </p>
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</div>
+{{ end }}

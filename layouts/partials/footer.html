@@ -1,0 +1,20 @@
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-id">
+      <p class="footer-name">{{ site.Params.author }}</p>
+      <p class="footer-role">{{ site.Params.role }}, {{ site.Params.department }}, {{ site.Params.institution }}</p>
+    </div>
+    <div class="footer-nav">
+      <p>
+        {{- range $i, $m := site.Menus.main }}{{ if $i }} · {{ end }}<a href="{{ $m.URL | relURL }}">{{ $m.Name }}</a>{{ end }}
+      </p>
+      <p>
+        <a href="{{ site.Params.cv | relURL }}" target="_blank" rel="noopener">CV (PDF)</a> ·
+        <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+      </p>
+      {{- if site.Params.mysite.credit }}
+      <p class="footer-credit">Created using <a href="https://garyking.org/mysite">GaryKing.org/mysite</a></p>
+      {{- end }}
+    </div>
+  </div>
+</footer>

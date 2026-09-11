@@ -1,0 +1,65 @@
+baseURL: "https://tatianapaulacruz.com/"
+title: "Tatiana Paula da Cruz"
+locale: en-us
+enableRobotsTXT: false
+
+params:
+  author: "Tatiana Paula da Cruz"
+  role: "PhD Candidate"
+  department: "Department of Political Science"
+  institution: "University of Wisconsin–Madison"
+  description: "PhD Candidate in Political Science at the University of Wisconsin–Madison, studying judicial politics and democratic backsliding."
+  tagline: "I study how courts defend their independence under democratic backsliding, focusing on strategic judicial behaviour in Brazil's Supreme Federal Court."
+  email: "tdacruz@wisc.edu"
+  office: "110 North Hall, 1050 Bascom Mall, Madison, WI 53706"
+  photo: "images/photo.jpg"
+  cv: "files/cv.pdf"
+
+  interests:
+    - "Judicial politics"
+    - "Democratic backsliding"
+    - "Courts and public opinion"
+    - "Politics of religion"
+    - "Survey experiments"
+    - "Latin American politics"
+
+  social:
+    - name: "Email"
+      url: "mailto:tdacruz@wisc.edu"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/tatiana-cruz-510299bb"
+
+  # Owner's choices from the information form: both boxes left unchecked.
+  mysite:
+    credit: false
+    discovery: false
+
+menu:
+  main:
+    - name: Bio
+      url: "/"
+      weight: 10
+    - name: Research
+      url: "/research/"
+      weight: 20
+    - name: Teaching
+      url: "/teaching/"
+      weight: 30
+    - name: CV
+      url: "/cv/"
+      weight: 40
+    - name: Contact
+      url: "/contact/"
+      weight: 50
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+sitemap:
+  changefreq: monthly
+  priority: 0.5
+
+# No blog/tags on this site, so empty taxonomy pages stay out of the sitemap.
+disableKinds: ["taxonomy", "term", "rss"]

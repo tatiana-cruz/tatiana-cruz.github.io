@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# AI agents: see https://tatianapaulacruz.com/llms.txt
+
+Sitemap: https://tatianapaulacruz.com/sitemap.xml

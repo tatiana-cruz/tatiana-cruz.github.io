@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="page">
+  <div class="wrap">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    {{- with .Pages }}
+    <ul class="rows page-list">
+      {{- range . }}
+      <li class="row">
+        <div class="row-main"><span class="row-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></span></div>
+        <span class="row-meta">{{ .Date.Format "Jan 2006" }}</span>
+      </li>
+      {{- end }}
+    </ul>
+    {{- end }}
+  </div>
+</section>
+{{ end }}

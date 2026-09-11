@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ $p := site.Params }}
+<div class="shell">
+  {{ partial "page-head.html" (dict "eyebrow" "Get in touch" "title" .Title) }}
+  <div class="block block--wide">
+    <p class="block-label">Email</p>
+    <p><a href="mailto:{{ $p.email }}">{{ $p.email }}</a></p>
+  </div>
+  {{- with $p.office }}
+  <div class="block block--wide">
+    <p class="block-label">Office</p>
+    <p>{{ . }}</p>
+  </div>
+  {{- end }}
+  <div class="block block--wide">
+    <p class="block-label">Elsewhere</p>
+    {{- range $p.social }}{{ if not (strings.HasPrefix .url "mailto:") }}
+    <p><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></p>
+    {{- end }}{{ end }}
+    <p><a href="{{ $p.cv | relURL }}" target="_blank" rel="noopener">CV (PDF)</a></p>
+  </div>
+</div>
+{{ end }}

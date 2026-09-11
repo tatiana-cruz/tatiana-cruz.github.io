@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="shell">
+  {{ partial "page-head.html" (dict "eyebrow" "Courses taught" "title" .Title) }}
+  {{- with hugo.Data.teaching }}
+  <ul class="rows">
+    {{- range . }}
+    <li class="row">
+      <div class="row-main">
+        <span class="row-title">{{ .course }}</span>
+        <span class="row-sub">{{ .role }} · {{ .institution }}</span>
+      </div>
+      <span class="row-meta">{{ .term }}</span>
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</div>
+{{ end }}
