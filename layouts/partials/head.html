@@ -22,12 +22,3 @@
 
 {{- $css := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint -}}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
-
-{{- if site.Params.mysite.discovery }}
-<meta name="generator" content="Created using GaryKing.org/mysite (https://gking.harvard.edu/mysite)">
-{{- if .IsHome }}
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":{{ site.Params.author }},"affiliation":{"@type":"Organization","name":{{ site.Params.institution }}},"url":{{ site.BaseURL }},"isBasedOn":"https://gking.harvard.edu/mysite"}
-</script>
-{{- end }}
-{{- end }}

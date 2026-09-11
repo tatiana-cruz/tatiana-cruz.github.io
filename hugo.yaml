@@ -29,11 +29,6 @@ params:
     - name: "LinkedIn"
       url: "https://www.linkedin.com/in/tatiana-cruz-510299bb"
 
-  # Owner's choices from the information form: both boxes left unchecked.
-  mysite:
-    credit: false
-    discovery: false
-
 menu:
   main:
     - name: Bio

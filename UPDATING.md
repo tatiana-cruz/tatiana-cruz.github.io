@@ -123,8 +123,8 @@ the Bio sidebar as a full upright portrait — nothing is cropped — so a tall
 (portrait-shaped) photo works best. Save it about 600 pixels wide so it stays sharp
 on high-resolution screens.
 
-If your new photo is a different shape, tell your assistant and they will adjust
-the `width` and `height` on the image so the page doesn't jump while it loads.
+If your new photo is a different shape, update the `width` and `height` on the
+image in `layouts/index.html` so the page doesn't jump while it loads.
 
 > Four of the five gallery photos come from Wikimedia Commons under CC BY-SA
 > licences, which require the photographer and licence stay credited. Keep their
