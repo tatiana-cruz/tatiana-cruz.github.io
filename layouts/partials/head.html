@@ -22,3 +22,17 @@
 
 {{- $css := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint -}}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+{{- if .IsHome }}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person",
+"name":{{ site.Params.author }},
+"jobTitle":{{ site.Params.role }},
+"affiliation":{"@type":"CollegeOrUniversity","name":{{ site.Params.institution }}},
+"worksFor":{"@type":"CollegeOrUniversity","name":{{ site.Params.institution }}},
+"email":{{ printf "mailto:%s" site.Params.email }},
+"url":{{ site.BaseURL }},
+"sameAs":["https://orcid.org/0000-0003-2485-7132","https://scholar.google.com/citations?user=ewg8woYAAAAJ","https://www.linkedin.com/in/tatiana-cruz-510299bb"],
+"knowsAbout":{{ site.Params.interests | jsonify }}}
+</script>
+{{- end }}
